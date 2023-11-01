@@ -19,6 +19,8 @@ extern "C" {
     
     void createRoom(const char*,int);
     void showRooms();
+    bool assign_room(char user[], char room[], char start_time[], char end_time[]);
+    
 
 
 
