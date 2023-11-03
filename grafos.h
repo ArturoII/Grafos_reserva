@@ -9,25 +9,37 @@
  *
  * Created on 1 de noviembre de 2023, 3:53 p. m.
  */
+#ifndef RESERVATIONS_H
+#define RESERVATIONS_H
 
-#ifndef GRAFOS_H
-#define GRAFOS_H
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-    
-    void createRoom(const char*,int);
-    void showRooms();
-    bool assign_room(char user[], char room[], char start_time[], char end_time[]);
-    
+#define MAX_USERS 100
+#define MAX_ROOMS 50
+#define MAX_RESERVATIONS 200
 
+struct Room {
+    char name[20];
+    int capacity;
+};
 
+struct Room rooms[MAX_ROOMS];
+struct Reservation {
+    char room[20];
+    char user[20];
+    char start_time[10];
+    char end_time[10];
+};
 
+struct Reservation reservations[MAX_RESERVATIONS];
 
-#ifdef __cplusplus
-}
-#endif
+int num_rooms;
+int num_reservations;
 
-#endif /* GRAFOS_H */
+void createRoom(const char* name, int capacidad);
+void showRooms();
+bool assign_room(char user[], char room[], char start_time[], char end_time);
 
+#endif /* RESERVATIONS_H */
