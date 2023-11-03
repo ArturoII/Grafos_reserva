@@ -36,7 +36,7 @@ void createRoom(const char* name, int capacidad) {
         strcpy(rooms[num_rooms].name, name);
         rooms[num_rooms].capacity = capacidad;
         num_rooms++;
-        printf("Sala %s creada con éxito.\n", name);
+        printf("Sala %s creada con exito.\n", name);
     } else {
         printf("No se pueden crear más salas, se alcanzó el límite.\n");
     }
@@ -71,7 +71,7 @@ bool assign_room(char user[], char room[], char start_time[], char end_time[]) {
         // Verificar si la sala está ocupada en el horario solicitado por el usuario
         if (strcmp(room, reservations[i].room) == 0) {
             if ((strcmp(start_time, reservations[i].end_time) < 0) && (strcmp(end_time, reservations[i].start_time) > 0)) {
-                printf("La sala %s está ocupada en ese horario.\n", room);
+                printf("La sala %s esta ocupada en ese horario.\n", room);
                 return false;
             }
         }
