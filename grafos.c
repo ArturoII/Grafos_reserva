@@ -1,23 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-
-#define MAX_USERS 100
-#define MAX_ROOMS 50
-#define MAX_RESERVATIONS 200
-
-struct Room {
-    char name[20];
-    int capacity;
-};
-
-struct Reservation {
-    char room[20];
-    char user[20];
-    char start_time[10];
-    char end_time[10];
-    int capacity_r;
-};
+#include "grafos.h"
 
 struct Room rooms[MAX_ROOMS];
 struct Reservation reservations[MAX_RESERVATIONS];
@@ -111,23 +95,4 @@ bool assign_room(char user[], char room[], char start_time[], char end_time[], i
     }
 
     return !room_occupied;
-}
-
-int main() {
-    createRoom("Sala A", 10);
-    createRoom("Sala B", 8);
-    createRoom("Sala C", 100);
-    createRoom("Sala D", 50);
-    showRooms();
-
-    assign_room("Usuario3", "Sala B", "09:30", "10:30", 30);
-    assign_room("Usuario1", "Sala A", "09:00", "10:30", 20);
-    assign_room("Usuario2", "Sala A", "10:45", "11:45", 10);
-    assign_room("Usuario4", "Sala A", "09:15", "10:00", 40);
-    assign_room("Usuario5", "Sala B", "10:00", "11:00", 50);
-    assign_room("Usuario6", "Sala C", "14:00", "16:00", 50);
-    assign_room("Usuario7", "Sala B", "14:00", "16:00", 5);
-
-
-    return 0;
 }
