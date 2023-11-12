@@ -9,8 +9,8 @@
  *
  * Created on 1 de noviembre de 2023, 3:53 p. m.
  */
-#ifndef RESERVATIONS_H
-#define RESERVATIONS_H
+#ifndef GRAFOS_H
+#define GRAFOS_H
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -25,21 +25,21 @@ struct Room {
     int capacity;
 };
 
-struct Room rooms[MAX_ROOMS];
 struct Reservation {
     char room[20];
     char user[20];
     char start_time[10];
     char end_time[10];
+    int capacity_r;
 };
 
-struct Reservation reservations[MAX_RESERVATIONS];
-
-int num_rooms;
-int num_reservations;
+extern struct Room rooms[MAX_ROOMS];
+extern struct Reservation reservations[MAX_RESERVATIONS];
+extern int num_rooms;
+extern int num_reservations;
 
 void createRoom(const char* name, int capacidad);
 void showRooms();
-bool assign_room(char user[], char room[], char start_time[], char end_time);
+bool assign_room(char user[], char room[], char start_time[], char end_time[], int capacity_r);
 
-#endif /* RESERVATIONS_H */
+#endif /* GRAFOS_H */
