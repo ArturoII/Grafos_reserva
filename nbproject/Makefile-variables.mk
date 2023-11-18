@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=liblibgrafos.a
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/liblibgrafos.a
+CND_ARTIFACT_NAME_Debug=libgrafos_reserva.a
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/libgrafos_reserva.a
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=libgrafos.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/libgrafos.tar
+CND_PACKAGE_NAME_Debug=Grafosreserva.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/Grafosreserva.tar
 # Release configuration
-CND_PLATFORM_Release=GNU-Linux
-CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=liblibgrafos.a
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/liblibgrafos.a
-CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=libgrafos.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/libgrafos.tar
+CND_PLATFORM_Release=None-Linux
+CND_ARTIFACT_DIR_Release=dist/Release/None-Linux
+CND_ARTIFACT_NAME_Release=libgrafos_reserva.a
+CND_ARTIFACT_PATH_Release=dist/Release/None-Linux/libgrafos_reserva.a
+CND_PACKAGE_DIR_Release=dist/Release/None-Linux/package
+CND_PACKAGE_NAME_Release=Grafosreserva.tar
+CND_PACKAGE_PATH_Release=dist/Release/None-Linux/package/Grafosreserva.tar
 #
 # include compiler specific variables
 #

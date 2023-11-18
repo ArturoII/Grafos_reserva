@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=libgrafos
+PROJECTNAME=Grafos_reserva
 
 # Active Configuration
 DEFAULTCONF=Debug
