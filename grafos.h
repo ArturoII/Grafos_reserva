@@ -9,6 +9,11 @@
  *
  * Created on 1 de noviembre de 2023, 3:53 p. m.
  */
+<<<<<<< HEAD
+=======
+#ifndef GRAFOS_H
+#define GRAFOS_H
+>>>>>>> 2bf52c8a42504a8f9fdd57c4c2ba74c492aadc47
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -17,6 +22,7 @@
 #include "cJSON.h"
 
 
+<<<<<<< HEAD
 struct Room rooms[MAX_ROOMS];
 struct Reservation reservations[MAX_RESERVATIONS];
 
@@ -110,3 +116,23 @@ bool assign_room(char user[], char room[], char start_time[], char end_time[], i
 
     return !room_occupied;
 }
+=======
+struct Reservation {
+    char room[20];
+    char user[20];
+    char start_time[10];
+    char end_time[10];
+    int capacity_r;
+};
+
+extern struct Room rooms[MAX_ROOMS];
+extern struct Reservation reservations[MAX_RESERVATIONS];
+extern int num_rooms;
+extern int num_reservations;
+
+void createRoom(const char* name, int capacidad);
+void showRooms();
+bool assign_room(char user[], char room[], char start_time[], char end_time[], int capacity_r);
+
+#endif /* GRAFOS_H */
+>>>>>>> 2bf52c8a42504a8f9fdd57c4c2ba74c492aadc47
