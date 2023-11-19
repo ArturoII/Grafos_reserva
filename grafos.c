@@ -36,7 +36,7 @@ void createRoom(const char* jsonString) {
                     strcpy(rooms[num_rooms].name, valorString);
                     rooms[num_rooms].capacity = valorEntero;
                     num_rooms++;
-                    printf("Sala %s creada con éxito.\n", name);
+                    printf("Sala %s creada con éxito.\n", name->valuestring);
                 } else {
                     printf("No se pueden crear más salas, se alcanzó el límite.\n");
                 }
@@ -90,7 +90,7 @@ bool assign_room(const char* jsonString) {
         fprintf(stderr, "No se pudo obtener el valor de \"nombre\" del JSON como una cadena.\n");
     }
 
-    char start_time;
+    char *start_time;
 
     cJSON *ini = cJSON_GetObjectItemCaseSensitive(json, "horainicio");
 
@@ -101,7 +101,7 @@ bool assign_room(const char* jsonString) {
         fprintf(stderr, "No se pudo obtener el valor de \"nombre\" del JSON como una cadena.\n");
     }
 
-    char end_time;
+    char *end_time;
 
     cJSON *fin = cJSON_GetObjectItemCaseSensitive(json, "horafinal");
 
