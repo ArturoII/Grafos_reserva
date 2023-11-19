@@ -10,24 +10,27 @@ struct Reservation reservations[MAX_RESERVATIONS];
 int num_rooms = 0;
 int num_reservations = 0;
 
-void createRoom(const char* jsonString) {
+void createRoom(const char* jsonstring) {
+    
+    
     // Decodificar el JSON
-    cJSON *json = cJSON_Parse(jsonString);
+    cJSON *json = cJSON_Parse(jsonstring);
     bool JsonError = true;
 
     if (json == NULL) {
+        printf("%s \n", jsonstring);
         fprintf(stderr, "Error al parsear el JSON.\n");
         JsonError = false;
     }
 
 
     if (JsonError) {
-        cJSON *capacity = cJSON_GetObjectItemCaseSensitive(json, "capacity");
+        cJSON *capacity = cJSON_GetObjectItemCaseSensitive(json, "capacidad");
 
         if (cJSON_IsNumber(capacity)) {
             int valorEntero = capacity->valueint;
 
-            cJSON *name = cJSON_GetObjectItemCaseSensitive(json, "name");
+            cJSON *name = cJSON_GetObjectItemCaseSensitive(json, "room");
 
             if (cJSON_IsString(name) && (name->valuestring != NULL)) {
                 const char *valorString = name->valuestring;
@@ -60,6 +63,8 @@ void showRooms() {
 }
 
 bool assign_room(const char* jsonString) {
+    
+    printf("%s \n", jsonString);
 
     cJSON *json = cJSON_Parse(jsonString);
 
@@ -95,7 +100,7 @@ bool assign_room(const char* jsonString) {
     cJSON *ini = cJSON_GetObjectItemCaseSensitive(json, "horainicio");
 
     if (cJSON_IsString(ini) && (ini->valuestring != NULL)) {
-        start_time = nombre->valuestring;
+        start_time = ini->valuestring;
         printf("la hora inicial es: %s\n", start_time);
     } else {
         fprintf(stderr, "No se pudo obtener el valor de \"nombre\" del JSON como una cadena.\n");
