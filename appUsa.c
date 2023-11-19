@@ -18,17 +18,19 @@
 int main(){
 
 
-        createRoom("Sala A", 10);
-        createRoom("Sala B", 8);
+        createRoom("Sala A", 40);
+        createRoom("Sala B", 50);
         createRoom("Sala C", 100); createRoom("Sala D", 50);
         showRooms();
-        assign_room("Usuario3", "Sala B", "09:30", "10:30", 30);
-        assign_room("Usuario1", "Sala A", "09:00", "10:30", 20);
-        assign_room("Usuario2", "Sala A", "10:45", "11:45", 10);
-        assign_room("Usuario4", "Sala A", "09:15", "10:00", 40);
-        assign_room("Usuario5", "Sala B", "10:00", "11:00", 50);
-        assign_room("Usuario6", "Sala C", "14:00", "16:00", 50);
-        assign_room("Usuario7", "Sala B", "14:00", "16:00", 5);
+        assign_room("{\"usuario\":\"Usuario3\",\"room\":\"Sala B\",\"horainicio\":\"09:30\",\"horafinal\":\"10:30\",\"capacidad\":30}");
+        assign_room("{\"usuario\":\"Usuario1\",\"room\":\"Sala A\",\"horainicio\":\"09:00\",\"horafinal\":\"10:30\",\"capacidad\":20}");
+        assign_room("{\"usuario\":\"Usuario2\",\"room\":\"Sala A\",\"horainicio\":\"10:45\",\"horafinal\":\"11:45\",\"capacidad\":10}");
+        assign_room("{\"usuario\":\"Usuario4\",\"room\":\"Sala A\",\"horainicio\":\"09:15\",\"horafinal\":\"10:00\",\"capacidad\":40}");
+        assign_room("{\"usuario\":\"Usuario5\",\"room\":\"Sala B\",\"horainicio\":\"10:00\",\"horafinal\":\"11:00\",\"capacidad\":50}");
+        assign_room("{\"usuario\":\"Usuario6\",\"room\":\"Sala C\",\"horainicio\":\"14:00\",\"horafinal\":\"16:00\",\"capacidad\":500}");
+        assign_room("{\"usuario\":\"Usuario7\",\"room\":\"Sala B\",\"horainicio\":\"14:00\",\"horafinal\":\"16:00\",\"capacidad\":5}");
+        
+        
     return 0;
 }
 

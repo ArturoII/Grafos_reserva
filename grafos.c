@@ -54,7 +54,70 @@ void showRooms() {
     }
 }
 
-bool assign_room(char user[], char room[], char start_time[], char end_time[], int capacity_r) {
+bool assign_room(const char* jsonString) {
+
+    cJSON *json = cJSON_Parse(jsonString);
+
+    if (json == NULL) {
+        fprintf(stderr, "Error al parsear el JSON.\n");
+        return 1;
+    }
+
+    char *user;
+
+    cJSON *nombre = cJSON_GetObjectItemCaseSensitive(json, "usuario");
+
+    if (cJSON_IsString(nombre) && (nombre->valuestring != NULL)) {
+        user = nombre->valuestring;
+        printf("El User es: %s\n", user);
+    } else {
+        fprintf(stderr, "No se pudo obtener el valor de \"nombre\" del JSON como una cadena.\n");
+    }
+
+    char *room;
+
+    cJSON *hab = cJSON_GetObjectItemCaseSensitive(json, "room");
+
+    if (cJSON_IsString(hab) && (hab->valuestring != NULL)) {
+        room = hab->valuestring;
+        printf("la habitacion es: %s\n", room);
+    } else {
+        fprintf(stderr, "No se pudo obtener el valor de \"nombre\" del JSON como una cadena.\n");
+    }
+
+    char start_time;
+
+    cJSON *ini = cJSON_GetObjectItemCaseSensitive(json, "horainicio");
+
+    if (cJSON_IsString(ini) && (ini->valuestring != NULL)) {
+        start_time = nombre->valuestring;
+        printf("la hora inicial es: %s\n", start_time);
+    } else {
+        fprintf(stderr, "No se pudo obtener el valor de \"nombre\" del JSON como una cadena.\n");
+    }
+
+    char end_time;
+
+    cJSON *fin = cJSON_GetObjectItemCaseSensitive(json, "horafinal");
+
+    if (cJSON_IsString(fin) && (fin->valuestring != NULL)) {
+        end_time = fin->valuestring;
+        printf("la hora final es: %s\n", end_time);
+    } else {
+        fprintf(stderr, "No se pudo obtener el valor de \"nombre\" del JSON como una cadena.\n");
+    }
+
+    int capacity_r;
+
+    cJSON *cap = cJSON_GetObjectItemCaseSensitive(json, "capacidad");
+
+    if (cJSON_IsNumber(cap)) {
+        capacity_r = cap->valueint;
+        printf("La capacidad es: %d\n", capacidad_r);
+    } else {
+        fprintf(stderr, "No se pudo obtener el valor de \"edad\" del JSON como un entero.\n");
+    }
+
     bool room_exists = false;
     for (int i = 0; i < num_rooms; i++) {
         if (strcmp(room, rooms[i].name) == 0) {
