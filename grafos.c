@@ -9,14 +9,41 @@ struct Reservation reservations[MAX_RESERVATIONS];
 int num_rooms = 0;
 int num_reservations = 0;
 
-void createRoom(const char* name, int capacidad) {
-    if (num_rooms < MAX_ROOMS) {
-        strcpy(rooms[num_rooms].name, name);
-        rooms[num_rooms].capacity = capacidad;
-        num_rooms++;
-        printf("Sala %s creada con éxito.\n", name);
+void createRoom(const char* jsonString) {
+    // Decodificar el JSON
+    cJSON *json = cJSON_Parse(jsonString);
+
+    if (json == NULL) {
+        fprintf(stderr, "Error al parsear el JSON.\n");
+        return 1;
+    }
+
+    cJSON *capacity = cJSON_GetObjectItemCaseSensitive(json, "capacity");
+
+    if (cJSON_IsNumber(capacity)) {
+        int valorEntero = capacity->valueint;
+
+        cJSON *name = cJSON_GetObjectItemCaseSensitive(json, "name");
+
+        if (cJSON_IsString(name) && (name->valuestring != NULL)) {
+            const char *valorString = name->valuestring;
+
+            if (num_rooms < MAX_ROOMS) {
+                strcpy(rooms[num_rooms].name, valorString);
+                rooms[num_rooms].capacity = valorEntero;
+                num_rooms++;
+                printf("Sala %s creada con éxito.\n", name);
+            } else {
+                printf("No se pueden crear más salas, se alcanzó el límite.\n");
+            }
+
+            printf("El nombre es: %s\n", valorString);
+        } else {
+            fprintf(stderr, "No se pudo obtener el valor de \"nombre\" del JSON como una cadena.\n");
+        }
+
     } else {
-        printf("No se pueden crear más salas, se alcanzó el límite.\n");
+        fprintf(stderr, "No se pudo obtener el valor de \"edad\" del JSON como un entero.\n");
     }
 }
 
