@@ -42,4 +42,4 @@ void createRoom(const char* name, int capacidad);
 void showRooms();
 bool assign_room(char user[], char room[], char start_time[], char end_time[], int capacity_r);
 
-#endif /* GRAFOS_H */
+#endif 
