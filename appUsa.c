@@ -18,9 +18,11 @@
 int main(){
 
 
-        createRoom("Sala A", 40);
-        createRoom("Sala B", 50);
-        createRoom("Sala C", 100); createRoom("Sala D", 50);
+
+        createRoom("{\room\":\"Sala A\",\"capacidad\":40}");
+        createRoom("{\room\":\"Sala B\",\"capacidad\":50}");
+        createRoom("{\room\":\"Sala C\",\"capacidad\":100}");
+        createRoom("{\room\":\"Sala D\",\"capacidad\":50}");
         showRooms();
         assign_room("{\"usuario\":\"Usuario3\",\"room\":\"Sala B\",\"horainicio\":\"09:30\",\"horafinal\":\"10:30\",\"capacidad\":30}");
         assign_room("{\"usuario\":\"Usuario1\",\"room\":\"Sala A\",\"horainicio\":\"09:00\",\"horafinal\":\"10:30\",\"capacidad\":20}");
@@ -33,6 +35,5 @@ int main(){
         
     return 0;
 }
-
 
 

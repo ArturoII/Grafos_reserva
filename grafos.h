@@ -38,8 +38,8 @@ extern struct Reservation reservations[MAX_RESERVATIONS];
 extern int num_rooms;
 extern int num_reservations;
 
-void createRoom(const char* name, int capacidad);
+void createRoom(const char* Json);
 void showRooms();
-bool assign_room(char user[], char room[], char start_time[], char end_time[], int capacity_r);
+bool assign_room(const char* Json);
 
 #endif 
