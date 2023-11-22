@@ -21,7 +21,11 @@ FC=gfortran
 AS=as
 
 # Macros
+<<<<<<< HEAD
 CND_PLATFORM=GNU-Linux
+=======
+CND_PLATFORM=None-Linux
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
 CND_DLIB_EXT=so
 CND_CONF=Release
 CND_DISTDIR=dist
@@ -35,8 +39,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+<<<<<<< HEAD
 	${OBJECTDIR}/app.o \
 	${OBJECTDIR}/newton.o
+=======
+	${OBJECTDIR}/appUsa.o \
+	${OBJECTDIR}/grafos.o
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
 
 
 # C Compiler Flags
@@ -57,6 +66,7 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
+<<<<<<< HEAD
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibnewton.a
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibnewton.a: ${OBJECTFILES}
@@ -74,6 +84,25 @@ ${OBJECTDIR}/newton.o: newton.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/newton.o newton.c
+=======
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgrafos_reserva.a
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgrafos_reserva.a: ${OBJECTFILES}
+	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgrafos_reserva.a
+	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgrafos_reserva.a ${OBJECTFILES} 
+	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgrafos_reserva.a
+
+${OBJECTDIR}/appUsa.o: appUsa.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/appUsa.o appUsa.c
+
+${OBJECTDIR}/grafos.o: grafos.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/grafos.o grafos.c
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
 
 # Subprojects
 .build-subprojects:

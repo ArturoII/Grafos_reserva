@@ -3,7 +3,11 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
+<<<<<<< HEAD
             <name>libnewton</name>
+=======
+            <name>libgrafos</name>
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions>h</header-extensions>

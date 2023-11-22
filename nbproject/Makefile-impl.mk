@@ -24,7 +24,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
+<<<<<<< HEAD
 PROJECTNAME=libnewton
+=======
+PROJECTNAME=Grafos_reserva
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
 
 # Active Configuration
 DEFAULTCONF=Debug

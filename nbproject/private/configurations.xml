@@ -37,7 +37,11 @@
     </conf>
     <conf name="Release" type="3">
       <toolsSet>
+<<<<<<< HEAD
         <developmentServer>ubuntu@52.14.214.134:22</developmentServer>
+=======
+        <developmentServer>ubuntu@18.224.30.49:22</developmentServer>
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
         <platform>2</platform>
       </toolsSet>
       <dbx_gdbdebugger version="1">

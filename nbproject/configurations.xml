@@ -4,7 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+<<<<<<< HEAD
       <itemPath>newton.h</itemPath>
+=======
+      <itemPath>grafos.h</itemPath>
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,8 +17,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+<<<<<<< HEAD
       <itemPath>app.c</itemPath>
       <itemPath>newton.c</itemPath>
+=======
+      <itemPath>appUsa.c</itemPath>
+      <itemPath>grafos.c</itemPath>
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -40,11 +49,19 @@
         <archiverTool>
         </archiverTool>
       </compileType>
+<<<<<<< HEAD
       <item path="app.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="newton.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="newton.h" ex="false" tool="3" flavor2="0">
+=======
+      <item path="appUsa.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="grafos.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="grafos.h" ex="false" tool="3" flavor2="0">
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
       </item>
     </conf>
     <conf name="Release" type="3">
@@ -69,11 +86,19 @@
         <archiverTool>
         </archiverTool>
       </compileType>
+<<<<<<< HEAD
       <item path="app.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="newton.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="newton.h" ex="false" tool="3" flavor2="0">
+=======
+      <item path="appUsa.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="grafos.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="grafos.h" ex="false" tool="3" flavor2="0">
+>>>>>>> e5ee6a7a4957fa90122624a6c41006cdd29d00cf
       </item>
     </conf>
   </confs>
