@@ -1,7 +1,9 @@
 # Grafos_reserva
 
 Esta es la parte del codigo que seria para que se pueda usar en java, asi que vamos a hacer un breve resumen de la compilacion y el uso de la libreria.
-se uso otra libreria para este proyecto que esta en este link ```https://github.com/DaveGamble/cJSON.git```
+Recordemos que en la otra rama esta Code.c para poder compilarla en c correctamente.
+se uso otra libreria para este proyecto que esta en este link
+```https://github.com/DaveGamble/cJSON.git```
 ## Proceso
 se crea un archivo en java en el que se van a escribir los metodos nativamente
 
