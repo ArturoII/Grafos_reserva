@@ -3,13 +3,19 @@ en este repositorio se encontrara  la creacion de una lobreria que usa grafos bi
 
 comandos para C
 se genera el .so a el compilar 
-```gcc -c -I/usr/lib/jvm/java-17-openjdk-amd64/include -I/usr/lib/jvm/java-17-openjdk-amd64/include/linux -fPIC grafos.c -o grafos.o```
+```
+gcc -c -I/usr/lib/jvm/java-17-openjdk-amd64/include -I/usr/lib/jvm/java-17-openjdk-amd64/include/linux -fPIC grafos.c -o grafos.o
+```
 
 compila el archivo "grafos.c" utilizando GCC, busca archivos de encabezado en el directorio actua
-```gcc -I. -c grafos.c -o grafos.o```
+```
+gcc -I. -c grafos.c -o grafos.o
+```
 
 trae de grafos.c y se crea el bgrafos .o y el -lcjson compila la libreria necesaria para que funcione correctamente 
-```gcc -I. -c grafos.c -o grafos.o -lcjson```
+```
+gcc -I. -c grafos.c -o grafos.o -lcjson
+```
 
 
 
