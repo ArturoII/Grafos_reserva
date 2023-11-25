@@ -1,6 +1,7 @@
 # Grafos_reserva
 
 Esta es la parte del codigo que seria para que se pueda usar en java, asi que vamos a hacer un breve resumen de la compilacion y el uso de la libreria.
+se uso otra libreria para este proyecto que esta en este link ```https://github.com/DaveGamble/cJSON.git```
 ## Proceso
 se crea un archivo en java en el que se van a escribir los metodos nativamente
 
@@ -23,4 +24,24 @@ ya que se genero el .h ahora se va a hacer uso de esa creacion y se va a copiar 
 ```
 cp libgrafos_Grafos.h libgrafos_Grafos.c 
 ```
-hecho eso se puede poner ahi todo el codigo c que se necesite
+hecho eso se puede poner ahi todo el codigo c que se necesite con las integraciones del .h
+
+ahora llega la compilacion de la libreria
+```
+gcc -c -fPIC -I/usr/lib/jvm/java-17-openjdk-amd64/include/ -I/usr/lib/jvm/java-17-openjdk-amd64/include/linux -o libgrafos_grafos.o libgrafos_grafos.c
+```
+
+luego se termina de compilar con el .o y aparte agregandole la otra libreria que se necesita que es cJSON
+```
+gcc -shared -o libgrafos_grafos.so libgrafos_grafos.o -lcjson
+```
+
+se copia en las librerias nativas del codigo 
+```
+sudo cp libgrafos_grafos.so /usr/lib
+```
+y se hace el comando para la configuracion
+```
+sudo ldconfig
+```
+despues de esos pasos el usuario hara las modificaciones respectivas para cargar la libreria y poder usarla
