@@ -1,6 +1,9 @@
 # Grafos_reserva
 en este repositorio se encontrara  la creacion de una lobreria que usa grafos bipartitos para la aignacion de salas esta esta contruida con un madelo el cual corre en c y otro que corre en java 
 
+se utilizo en esta libreria el uso de otra la cual es cJSON
+```https://github.com/DaveGamble/cJSON.git```
+
 comandos para C
 se genera el .so a el compilar 
 ```
